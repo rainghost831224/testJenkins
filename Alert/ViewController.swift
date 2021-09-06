@@ -41,24 +41,8 @@ class ViewController: NSViewController {
         alert.addButton(withTitle: "ignore")
         alert.addButton(withTitle: "OK")
         alert.addButton(withTitle: "NO")
-        //let result = alert.runModal()
-        
-       /* alert.beginSheetModal(for: view.window!){(response) -> Void in
-            print("?")
-        }*/
         alert.beginSheetModal(for: view.window!,completionHandler: {(response) -> Void in
             self.label.stringValue = "\(response.rawValue)"})
-        
-//        switch result{
-//        case .alertFirstButtonReturn:
-//            print("first")
-//        case .alertSecondButtonReturn:
-//            print("second")
-//        case .alertThirdButtonReturn:
-//            print("third")
-//        default:
-//            break
-//        }
     }
 
 }
